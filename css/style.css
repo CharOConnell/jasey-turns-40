@@ -5,7 +5,7 @@
 
 
 body {
-    background-color: #232120;
+    background-color: #f7d7c7;
     margin: 0;
     color: #000;
     width: 100%;
@@ -76,4 +76,14 @@ body {
 /* form section */
 .rsvpformsection {
     height: 85vh;
+}
+
+.field-element {
+    width: -webkit-fill-available;
+}
+
+@media(min-width: 992px) {
+    .rsvpformsection {
+        margin: 10vw;
+    }
 }
