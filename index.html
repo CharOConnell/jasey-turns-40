@@ -16,7 +16,7 @@
         window.onload = function () {
             document.getElementById('rsvpform').addEventListener('submit', function (event) {
                 //event.preventDefault();
-                emailjs.sendForm('gmail', 'weddingceremony', this, "MQIAbMZy6rzBFRcaD")
+                emailjs.sendForm('gmail', 'wedding', this, "MQIAbMZy6rzBFRcaD")
                     .then(function () {
                         console.log('SUCCESS!');
                     }, function (error) {
