@@ -27,10 +27,6 @@ body {
     max-height: 11.5vh;
 }
 
-/* .dateCR {
-    max-height: 5vh;
-} */
-
 /* engagement photo */
 .engagement {
     height: 88vh;
@@ -82,8 +78,13 @@ body {
     width: -webkit-fill-available;
 }
 
+/* large screen only */
 @media(min-width: 992px) {
     .rsvpformsection {
         margin: 10vw;
+    }
+
+    .engagement {
+        background-position: 0% 75%;
     }
 }
