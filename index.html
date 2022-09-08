@@ -16,7 +16,7 @@
         window.onload = function () {
             document.getElementById('rsvpform').addEventListener('submit', function (event) {
                 //event.preventDefault();
-                emailjs.sendForm('gmail', 'wedding', this, "MQIAbMZy6rzBFRcaD")
+                emailjs.sendForm('gmail', 'weddingceremony', this, "MQIAbMZy6rzBFRcaD")
                     .then(function () {
                         console.log('SUCCESS!');
                     }, function (error) {
@@ -106,13 +106,6 @@
                         </fieldset>
                     </div>
                 </div>
-                <!-- guest party names
-                <div class="row mx-4">
-                    <h5 class="title" for="text-guests-field">Names of guests in your Party</h5>
-                    <div id="text-guests" class="form-item field text col">
-                        <input class="field-element text" type="text" id="text-guests-field" name="text-guests-names">
-                    </div>
-                </div> -->
                 <!-- food options -->
                 <div class="row mx-4 mt-2 mb-4">
                     <div class="col">
@@ -144,7 +137,7 @@
                         <fieldset id="main-option" class="form-item field radio" aria-required="false">
                             <div class="option"><label><input type="radio" name="main-option-field" value="option1"> Option 1</label></div>
                             <div class="option"><label><input type="radio" name="main-option-field" value="option2"> Option 2</label></div>
-                            <div class="option"><label><input type="radio" name="starter-option-field" value="kids"> Childrens option</label></div>
+                            <div class="option"><label><input type="radio" name="main-option-field" value="kids"> Childrens option</label></div>
                         </fieldset>
                     </div>
                 </div>
@@ -158,7 +151,7 @@
                         <fieldset id="dessert-option" class="form-item field radio" aria-required="false">
                             <div class="option"><label><input type="radio" name="dessert-option-field" value="option1"> Option 1</label></div>
                             <div class="option"><label><input type="radio" name="dessert-option-field" value="option2"> Option 2</label></div>
-                            <div class="option"><label><input type="radio" name="starter-option-field" value="kids"> Childrens option</label></div>
+                            <div class="option"><label><input type="radio" name="dessert-option-field" value="kids"> Childrens option</label></div>
                         </fieldset>
                     </div>
                 </div>
@@ -193,18 +186,10 @@
             </form>
 
         </div>
-        
-
-
-
-
     </section>
 
-    <!-- <script src="js/sendEmail.js"></script> -->
+    <!-- JS scripting -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <!-- <script type="text/javascript">
-        emailjs.init('sdtEYkTlZ1TFEjoT7')
-    </script> -->
 </body>
 
 </html>
