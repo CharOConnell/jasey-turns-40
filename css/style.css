@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Karla:100,200,300,400,500,600,700');
+
+
+
+body {
+    background-color: #232120;
+    margin: 0;
+    color: #000;
+    width: 100%;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.main-banner {
+    height: 12vh;
+    background-color: #f5c4ab;
+}
+
+.text-center {
+    max-width: 100%;
+    padding: 0;
+    padding-left: 15px;
+}
+
+.titleCR {
+    max-height: 11.5vh;
+}
+
+/* .dateCR {
+    max-height: 5vh;
+} */
+
+/* engagement photo */
+.engagement {
+    height: 88vh;
+    background: url("../images/IMG_1506.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    max-width: 100%;
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    
+}
+
+.section-background-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.65);
+}
+
+.welcometext {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.scrolltext {
+    text-align: center;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* form section */
+.rsvpformsection {
+    height: 85vh;
+}

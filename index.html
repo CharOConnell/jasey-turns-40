@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/89e846d039.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <!-- Load emailJS Framework -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('rsvpform').addEventListener('submit', function (event) {
+                //event.preventDefault();
+                emailjs.sendForm('gmail', 'wedding', this, "MQIAbMZy6rzBFRcaD")
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
+    <title>Dancer Wedding | Home</title>
+</head>
+
+<body>
+    <section class="container-fluid">
+        <div class="row main-banner">
+            <div class="col text-center justify-content-center">
+                <img src="images/c&r.png" alt="C & R" class="titleCR pt-2 image-responsive">
+            </div>
+            <!-- <div class="col-6 offset-2 col-md-4 offset-md-4 text-center justify-content-center">
+                <img src="images/c&r.png" alt="C & R" class="titleCR pt-2 image-responsive">    
+            </div> -->
+            <!-- <div class="col-4 col-md-2 offset-md-2 align-self-center justify-content-center">
+                <a class="btn btn-dark btn-lg" href="#" role="button">RSVP</a>
+            </div> -->
+        </div>
+    </section>
+
+
+    <section id="engagementphoto">
+        <div class="engagement">
+            <div class="section-background-overlay"></div>
+            <div class="welcometext">
+                <h1 class="display-3">23.5.24</h1>
+                <h3>We look forward to you joining us on our special day!</h3>
+            </div>
+            <div class="scrolltext">
+                <h6>Fill in the form below to RSVP</h6>
+                <h6><i class="fas fa-arrow-down"></i></h6>
+            </div>
+        </div>
+    </section>
+
+    <section class="rsvpformsection">
+        <form class="field-list text-light" id="rsvpform">
+            <fieldset id="name" class="form-item fields name required">
+                <legend>
+                    Name <span class="required" aria-hidden="true">*</span>
+                </legend>
+                <div class="field first-name">
+                    <label class="caption">
+                        <input class="field-element field-control" name="fname" x-autocompletetype="given-name"
+                            type="text" spellcheck="false" maxlength="30" data-title="First" aria-required="true"
+                            id="firstname">
+                        <span class="caption-text">First Name</span>
+                    </label>
+                </div>
+                <div class="field last-name">
+                    <label class="caption">
+                        <input name="lname" x-autocompletetype="surname" type="text" spellcheck="false" maxlength="30"
+                            aria-required="true" id="lastname">
+                        <span class="caption-text">Last Name</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <div id="email-address" class="form-item field email required">
+                <label class="title" for="email-address-field">
+                    Email
+                    <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input class="field-element" id="email-address-field" name="email" type="email" autocomplete="email"
+                    spellcheck="false" aria-required="true">
+            </div>
+
+            <fieldset id="radio-attend" class="form-item field radio required" aria-required="true">
+                <legend class="title">
+                    Will you be attending?
+                    <span class="required" aria-hidden="true">*</span>
+                </legend>
+                <div class="option"><label><input type="radio" name="radio-attend-field" value="Yes"> Yes</label></div>
+                <div class="option"><label><input type="radio" name="radio-attend-field" value="No"> No</label></div>
+            </fieldset>
+
+            <div id="text-guests" class="form-item field text">
+                <label class="title" for="text-guests-field">
+                    Names of Guests in your Party
+                </label>
+                <input class="field-element text" type="text" id="text-guests-field" name="text-guests-names">
+            </div>
+
+            <div id="text-restrictions" class="form-item field text">
+                <label class="title" for="text-restrictions-field">
+                    Any food restrictions?
+                </label>
+                <input class="field-element text" type="text" id="text-restrictions-field" name="food-restrictions">
+            </div>
+
+            <div id="text-question-comments" class="form-item field text">
+                <label class="title" for="text-question-comments-field">
+                    Questions or Comments
+                </label>
+                <input class="field-element text" type="text" id="text-question-comments-field" name="comments-field">
+            </div>
+
+            <input type="submit" id="button" value="Send Email">
+        </form>
+
+
+
+
+    </section>
+
+    <!-- <script src="js/sendEmail.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- <script type="text/javascript">
+        emailjs.init('sdtEYkTlZ1TFEjoT7')
+    </script> -->
+</body>
+
+</html>
