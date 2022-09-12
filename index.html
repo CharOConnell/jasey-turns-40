@@ -13,9 +13,15 @@
     <!-- Load emailJS Framework -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('MQIAbMZy6rzBFRcaD');
+        })();
+    </script>
+    <script type="text/javascript">
         window.onload = function () {
             document.getElementById('rsvpform').addEventListener('submit', function (event) {
-                //event.preventDefault();
+                event.preventDefault();
                 emailjs.sendForm('gmail', 'wedding', this, "MQIAbMZy6rzBFRcaD")
                     .then(function () {
                         console.log('SUCCESS!');
