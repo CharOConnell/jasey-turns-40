@@ -21,12 +21,14 @@
     <script type="text/javascript">
         window.onload = function () {
             document.getElementById('rsvpform').addEventListener('submit', function (event) {
+                event.preventDefault();
                 emailjs.sendForm('gmail', 'wedding', this, "MQIAbMZy6rzBFRcaD")
                     .then(function () {
                         console.log('SUCCESS!');
                     }, function (error) {
                         console.log('FAILED...', error);
                     });
+                this.reset();
             });
         }
     </script>
