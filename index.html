@@ -15,10 +15,10 @@
     <script type="text/javascript">
         window.onload = function () {
             document.getElementById('rsvpform').addEventListener('submit', function (event) {
-                event.preventDefault();
-                emailjs.sendForm('gmail', 'wedding', this, "MQIAbMZy6rzBFRcaD")
+                const thisObj = this;
+                emailjs.sendForm('gmail', 'wedding', thisObj, "MQIAbMZy6rzBFRcaD")
                     .then(function () {
-                        this.reset();
+                        thisObj.reset();
                         console.log('SUCCESS!');
                     }, function (error) {
                         console.log('FAILED...', error);
