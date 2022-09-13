@@ -15,6 +15,7 @@
     <script type="text/javascript">
         window.onload = function () {
             document.getElementById('rsvpform').addEventListener('submit', function (event) {
+                event.preventDefault();
                 const thisObj = this;
                 emailjs.sendForm('gmail', 'wedding', thisObj, "MQIAbMZy6rzBFRcaD")
                     .then(function () {
@@ -26,7 +27,6 @@
             });
         }
     </script>
-
     <title>Dancer Wedding | Home</title>
 </head>
 
